@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.12.0">
+<title>Gallery</title>
+
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-slate.d72ca8ef.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-slate.d72ca8ef.css">
+<link rel="modulepreload" href="./_observablehq/client.68923eea.js">
+<link rel="modulepreload" href="./_observablehq/runtime.3b5fbfd2.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.fbe34e68.js">
+<link rel="modulepreload" href="./_import/components/gallery.c85b7dee.js">
+<link rel="modulepreload" href="./_npm/react@18.3.1/jsx-runtime.e4a2bff6.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/7055d4c5.js">
+<link rel="modulepreload" href="./_npm/react-dom@18.3.1/50d840fe.js">
+<link rel="modulepreload" href="./_npm/react@18.3.1/5c25487d.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e95f898e.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/d44feff9.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/5830b12a.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/84d7b8e9.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/2c0cdfa2.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/626bedc4.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/00c41b5d.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/b5f7cdc6.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/b22c5864.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/6f15f633.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/ef1ec490.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e1ff060.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/5851d7ef.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/dcd02767.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/f1db2593.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/034b7bcb.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/4bb53638.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/bbafde58.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/aa5b35a8.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/32c7fec2.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/567840a0.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/cf9b720b.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/5dcd62f4.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/f8e03c56.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/5bc129e1.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/19c92b44.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/f31b5398.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/8debb4ba.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/4b0cc581.js">
+<link rel="modulepreload" href="./_npm/scheduler@0.23.2/fef76239.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/5eed35fd.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/e67acb27.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/8ac9039b.js">
+<link rel="icon" href="./_file/images/background.adc5f424.svg" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.68923eea.js";
+
+define({id: "022186e7", inputs: ["$"], outputs: ["Gallery","myclick"], body: async ($) => {
+const {Gallery} = await import("./_import/components/gallery.c85b7dee.js");
+function myclick(e) {
+  // e.target.classList.toggle("fullscreen")
+  // document.getElementById("fullscreen").style.display="block";
+  document.getElementById("fullscreen").src = e.target.src;
+  $("#imagebox").modal("show");
+}
+return {Gallery,myclick};
+}});
+
+define({id: "055ee89a", inputs: ["d3"], outputs: ["entries","gallery","gallery2"], body: (d3) => {
+// alternate ways of random images
+// https://picsum.photos/id/XXXX/200/300
+// https://picsum.photos/id/"+d3.randomInt(1,400)()+"/200/500")
+// https://picsum.photos/width/height?random=XXXX
+const entries=d3.range(5).map(i=>{
+  // d3.randomInt(0,3)()
+  const range=[200,300,400,500]
+  const width=range[d3.randomInt(0,3)()];
+  const height=250;
+  return `https://picsum.photos/${width}/${height}?random=`+i
+  })
+
+const gallery = document.createElement("div");
+const gallery2 = document.createElement("div");
+// const root = ReactDOM.createRoot(gallery);
+
+return {entries,gallery,gallery2};
+}});
+
+define({id: "b2863e6b", mode: "jsx", inputs: ["ReactDOM","gallery","Gallery","entries","myclick","gallery2"], outputs: ["jsx"], body: async (ReactDOM,gallery,Gallery,entries,myclick,gallery2) => {
+const {jsx} = await import("./_npm/react@18.3.1/jsx-runtime.e4a2bff6.js");
+ReactDOM.createRoot(gallery).render(/* @__PURE__ */ jsx(Gallery, { listarray: entries, clickevent: myclick }));
+ReactDOM.createRoot(gallery2).render(/* @__PURE__ */ jsx(Gallery, { listarray: entries, clickevent: myclick }));
+return {jsx};
+}});
+
+define({id: "ce387d5e", mode: "inline", inputs: ["gallery","display"], body: async (gallery,display) => {
+display(await(
+gallery
+))
+}});
+
+define({id: "284c986d", mode: "inline", inputs: ["gallery2","display"], body: async (gallery2,display) => {
+display(await(
+gallery2
+))
+}});
+
+</script>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<div class="menubar"><div class="menubrand"><a class="logo" href="./"> <img src="./_file/icons/5gif.8280ea68.png">  5GIF - Document Manager</a>          </div><div class="rightmenubar"><a class="item undefined" href="./documents">  WG-Spectrum </a><a class="item undefined" href="./6gcg">  6GCG </a></div><a class="item" target="_blank" href="https://x.com/5gindiaforum.in" rel="noopener noreferrer"> <i class="fa fa-solid fa-brands fa-twitter large"></i> </a><a class="item" target="_blank" href="https://linkedin.com/company/5gif" rel="noopener noreferrer"> <i class="fa fa-solid fa-brands fa-linkedin large"></i> </a><a class="item" target="_blank" href="https://github.com/5gif" rel="noopener noreferrer"> <i class="fa fa-solid fa-brands fa-github large"></i> </a><div class="ui dropdown item" id="login">    
+        <i class="bars large  icon"></i> <i class="angle down large  icon"></i>                
+    <div class="left stackable menu ">     
+    <a class="item mobileitem" href="./documents">  WG-Spectrum </a><a class="item mobileitem" href="./6gcg">  6GCG </a>
+        <div class="header">  <span id="xuserinfo">USER </span> </div>      
+        <div class="item" data-user-auth="">      <i class="icon user"></i>Profile      </div>
+        <div class="item" data-user-auth="">     <i class="icon wrench"></i>Settings       </div>
+        <div class="item" data-user-auth=""> <i class="icon folder"></i>Documents</div>
+        <div class="item" id="logout"> <i class="icon  sign in alternate"></i> Sign In</div> 
+    </div>
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<link type="text/css" rel="stylesheet" href="./_file/css/style.80bdcb6d.css">
+
+
+<div class="ui green right ribbon label hidden" id="userinfo"> </div>
+<div id="loginformparent" class="ui inverted tiny modal" hidden=""></div>
+  <script> 
+    // function toggleBigMenu(){
+    // var box=document.querySelector("#bigmenubox");
+    // box.classList.toggle("visible");
+    // }
+
+    $(".ui.dropdown").dropdown()
+  </script>
+
+    <script type="module">
+    // const {showLogin,getCurrentUser,logOut} = await import( fbauthpath )
+
+    import {showLogin,getCurrentUser,logOut} from "/components/fbauth.js"
+    document.getElementById("logout").addEventListener("click", function (e) {  
+
+      getCurrentUser().then(u=>{
+        if(u==null){
+        $("#loginformparent").modal('show');        
+          showLogin("#loginformparent","#userinfo");
+        }else{
+        document.querySelector("#userinfo").classList.add("hidden");
+          logOut();
+        }
+        
+      })
+});
+</script>
+    
+    
+</header>
+<main id="observablehq-main" class="observablehq">
+<link type="text/css" rel="stylesheet" href="./_file/css/gallery.89173ca8.css">
+<div class="observablehq observablehq--block"><!--:022186e7:--></div>
+<h1>Image Gallery</h1>
+<div class="observablehq observablehq--block"><!--:055ee89a:--></div>
+<div class="ui large modal" id="imagebox">
+<img id="fullscreen">
+
+<span class="ui left teal label" id="imgtitle"> Launch event listener on modal open to reset styles </span>
+</div>
+<div class="observablehq observablehq--block"><!--:b2863e6b:--></div>
+<style>
+.ui.obshq.segment{
+    background:var(--theme-background-alt);    
+    border-radius: .28571429rem;
+     border: 1px solid var(--theme-foreground-faintest);     
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.15);
+}
+
+</style>
+<div class="ui obshq raised segment">
+<h1> trip 1 </h1>
+<observablehq-loading></observablehq-loading><!--:ce387d5e:-->
+</div>
+<div class="ui obshq piled segment">
+<h1> trip 2 </h1>
+<observablehq-loading></observablehq-loading><!--:284c986d:-->
+</div>
+</main>
+<footer id="observablehq-footer">
+<div><hr><div style="text-align:center">
+    © 2024 - 5G India Forum  | 
+    Photo by <a href="https://unsplash.com/@lightliu?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="_blank" rel="noopener noreferrer">Light Liu</a> on <a href="https://unsplash.com/photos/bokeh-photography-N8P35ITqRZA?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="_blank" rel="noopener noreferrer">Unsplash</a>      
+    
+    </div>
+    
+    <br><br>
+    
+
+    </div>
+</footer>
+</div>

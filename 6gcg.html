@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.12.0">
+<title>6GCG Documents</title>
+
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin>
+<link rel="preload" as="style" href="./_import/css/style.c018ae2f.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/css/style.c018ae2f.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.68923eea.js">
+<link rel="modulepreload" href="./_observablehq/runtime.3b5fbfd2.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.fbe34e68.js">
+<link rel="modulepreload" href="./_import/components/fbauth.e718e947.js">
+<link rel="modulepreload" href="./_import/components/utils.1bc68d3a.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/7055d4c5.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/063eb405.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.c13ac5ac.js">
+<link rel="modulepreload" href="./_import/components/firebasecfg.d82a3da1.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.16/e828d8c8.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/c68fbd73.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e95f898e.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/d44feff9.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/5830b12a.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/84d7b8e9.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/2c0cdfa2.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/626bedc4.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/00c41b5d.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/b5f7cdc6.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/b22c5864.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/6f15f633.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/ef1ec490.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e1ff060.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/5851d7ef.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/dcd02767.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/f1db2593.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/034b7bcb.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/4bb53638.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/bbafde58.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/aa5b35a8.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/32c7fec2.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/567840a0.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/cf9b720b.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/5dcd62f4.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/f8e03c56.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/5bc129e1.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/19c92b44.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/f31b5398.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/8debb4ba.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/4b0cc581.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/a62ae5ce.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/5eed35fd.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/e67acb27.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/1ee6c50d.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/8ac9039b.js">
+<link rel="icon" href="./_file/images/background.adc5f424.svg" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.68923eea.js";
+
+define({id: "1c86fddb", outputs: ["upload","deleteFile","getURL","getFilesLists","getInfo","Banner","basepath"], body: async () => {
+const [{upload, deleteFile, getURL, getFilesLists, getInfo}, {Banner}] = await Promise.all([import("./_import/components/fbauth.e718e947.js"), import("./_import/components/utils.1bc68d3a.js")]);
+
+const basepath="6gcg/"
+return {upload,deleteFile,getURL,getFilesLists,getInfo,Banner,basepath};
+}});
+
+define({id: "5a4b1237", mode: "inline", inputs: ["Banner","display"], body: async (Banner,display) => {
+display(await(
+Banner("6GCG - Docs")
+))
+}});
+
+define({id: "d6fdd099", inputs: ["$"], body: ($) => {
+// then(f=>f.text().then(f=>{document.getElementById("mybox").innerText=f}))
+$(".message .close").on("click", function () {
+  $(this).closest(".message").transition("fade");
+});
+}});
+
+define({id: "decc6434", inputs: ["view","Inputs","fileLists","html"], outputs: ["selected"], body: (view,Inputs,fileLists,html) => {
+const selected = view(
+  Inputs.table(fileLists, {
+    columns: ["name", "size", "created"],
+    required: false,
+    format: {
+      name: (x, indx) =>
+        html`<a target="_blank" href=${fileLists[indx].url}> ${x} </a>`,
+    },
+  })
+);
+return {selected};
+}});
+
+define({id: "0f58c096", inputs: ["selected","deleteFile","basepath","reset","increment"], body: (selected,deleteFile,basepath,reset,increment) => {
+document.getElementById("btnFetchFiles").onclick = () => {
+  console.log("Delete", selected.length);
+  if (selected.length > 0) {
+    selected.forEach((f) => {
+      deleteFile(basepath+f.name);
+    });
+    reset();
+  }
+};
+document.getElementById("btnrefresh").onclick = () => {
+  console.log("reloading again", selected.length);
+  increment();
+  // if (selected.length > 0) {
+  //   selected.forEach((f) => {
+  //     deleteFile(f.name);
+  //   });
+  //   reset();
+  // }
+};
+}});
+
+define({id: "f4f1da62", inputs: ["upload","reset","d3","html"], outputs: ["allfilelist","storageFiles","dropArea","uploadFile","handleFiles","highlight","unhighlight","preventDefaults","handleDrop","clearList"], body: (upload,reset,d3,html) => {
+const allfilelist = [];
+const storageFiles = [];
+// const currentfiles = document.getElementById("currentfiles"); // document.createElement("div");
+let dropArea = document.getElementById("drop-area");
+// let fileSelect = document.getElementById("fileSelect");
+
+document.getElementById("clearfiles").onclick = clearList;
+
+// fileSelect.addEventListener("click", (e) => {
+// let fileElem = document.getElementById("fileElem");
+// if (fileElem) {
+//     fileElem.click();
+//   }
+// });
+
+function uploadFile() {
+  // console.log("File dropped: META", file);
+  allfilelist.forEach((f) => {
+    upload(f, "6gcg/" + f.name);
+    console.log("File uploaded..:", f.name);
+  });
+  reset();
+  clearList();
+  // Here you can add your file upload logic
+}
+
+function handleFiles(files) {
+  // uploadFile
+  document.getElementById("upload").onclick = () => {
+    uploadFile();
+    d3.select(".ui.message p").text("Files uploaded...");
+    
+  };
+}
+
+dropArea.addEventListener("dragenter", highlight, false);
+dropArea.addEventListener("dragleave", unhighlight, false);
+dropArea.addEventListener("dragover", highlight, false);
+dropArea.addEventListener("drop", handleDrop, false);
+
+function highlight(e) {
+  preventDefaults(e);
+  dropArea.classList.add("highlight");
+}
+
+function unhighlight(e) {
+  preventDefaults(e);
+  dropArea.classList.remove("highlight");
+}
+
+function preventDefaults(e) {
+  e.preventDefault();
+  e.stopPropagation();
+}
+
+function handleDrop(e) {
+  preventDefaults(e);
+  unhighlight(e);
+  let dt = e.dataTransfer;
+  let files = dt.files;
+
+  var flist = document.getElementById("filelist");
+  [...files].forEach((f) => {
+    var el = html`<em>${f.name} (${d3.format(".2s")(f.size)})</em><br />`;
+    flist.append(el);
+    allfilelist.push(f);
+  });
+  console.log("Files ", files);
+  if (files.length > 0) {
+    document.getElementById("upload").classList.remove("disabled");
+  }
+  handleFiles(files);
+}
+
+function clearList() {
+  allfilelist.length = 0;
+  var flist = document.getElementById("filelist");
+  flist.innerHTML = "";
+  document.getElementById("upload").classList.add("disabled");
+  document.getElementById("inpFileInput").value = "";
+  
+}
+return {allfilelist,storageFiles,dropArea,uploadFile,handleFiles,highlight,unhighlight,preventDefaults,handleDrop,clearList};
+}});
+
+define({id: "72b5b0d4", inputs: ["getFilesLists","getInfo","d3","getURL"], outputs: ["fbFileLists"], body: (getFilesLists,getInfo,d3,getURL) => {
+// columns:["name","size","created"]
+async function fbFileLists(basepath) {
+//   var basepath = "6gcg";
+  var temp = getFilesLists(basepath)
+    .then((r) =>
+      r.items.map((i) => {
+        // console.log("info",i)
+        return getInfo(basepath+i.name).then(async (metadata) => {
+
+          var d = new Date(metadata.updated);
+          // console.log("meta",metadata)
+          d = d.toLocaleString("en-IN", {
+            weekday: "long",
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            dateTime: "%x, %X",
+            timeZoneName: "short",
+          });
+          // d=d3.timeFormat(enUs)(d)
+          return {
+            name: i.name,
+            fullpath: i.fullPath,
+            size: d3.format("~s")(metadata.size),
+            type: metadata.contentType,
+            created: d,
+            url: await getURL(basepath+i.name).then((u) => u),
+          };
+        }).catch(e=>console.log("Error getting meta",e));
+
+        // return { name: i.name, fullpath: i.fullPath };
+      })
+    )
+    .then((items) => {
+      console.log("Waiting for all promises array", items);
+      return Promise.all(items).then((values) => values);
+    }).catch(e=>{    
+      console.log("Error Getting list of docs",e)
+     return [];
+    });
+
+  return await temp;
+  // .then(items=>d3.map(items,d=>d))
+  // var result = await temp.then((items) => {
+  //   console.log("items", items);
+  //   return Promise.all(items).then((values) => values);
+  //   //  return d3.map(items,d=>d.then(f=>(f)))
+  // });
+  // return result;
+}
+return {fbFileLists};
+}});
+
+define({id: "221ad6b3", inputs: ["count","fbFileLists"], outputs: ["fileLists"], body: (count,fbFileLists) => {
+count;
+console.log("Refreshed ");
+const fileLists = fbFileLists("6gcg/");
+return {fileLists};
+}});
+
+define({id: "ebdd826d", inputs: ["Mutable"], outputs: ["count","increment","reset"], body: (Mutable) => {
+const count = Mutable(0);
+const increment = () => ++count.value;
+const reset = () => (count.value = 0);
+return {count,increment,reset};
+}});
+
+define({id: "ff1863d2", inputs: ["d3","html","allfilelist","handleFiles"], body: (d3,html,allfilelist,handleFiles) => {
+document.getElementById("inpFileInput").addEventListener("change", (e) => {
+  console.log("found files changed", e);
+  var files = e.target.files;
+  d3.select(".ui.message").classed("hidden", false);
+  d3.select(".ui.message p").text("Files uploaded...");
+  var flist = document.getElementById("filelist");
+  [...files].forEach((f) => {
+    var el = html`<em>${f.name} (${d3.format(".2s")(f.size)})</em><br />`;
+    flist.append(el);
+    allfilelist.push(f);
+  });
+  // console.log("Files ",files)
+  if (files.length > 0) {
+    document.getElementById("upload").classList.remove("disabled");
+    // document.getElementById("upload").classList.remove("disabled");
+  }
+  handleFiles(files);
+});
+}});
+
+</script>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<div class="menubar"><div class="menubrand"><a class="logo" href="./"> <img src="./_file/icons/5gif.8280ea68.png">  5GIF - Document Manager</a>          </div><div class="rightmenubar"><a class="item undefined" href="./documents">  WG-Spectrum </a><a class="item undefined" href="./6gcg">  6GCG </a></div><a class="item" target="_blank" href="https://x.com/5gindiaforum.in" rel="noopener noreferrer"> <i class="fa fa-solid fa-brands fa-twitter large"></i> </a><a class="item" target="_blank" href="https://linkedin.com/company/5gif" rel="noopener noreferrer"> <i class="fa fa-solid fa-brands fa-linkedin large"></i> </a><a class="item" target="_blank" href="https://github.com/5gif" rel="noopener noreferrer"> <i class="fa fa-solid fa-brands fa-github large"></i> </a><div class="ui dropdown item" id="login">    
+        <i class="bars large  icon"></i> <i class="angle down large  icon"></i>                
+    <div class="left stackable menu ">     
+    <a class="item mobileitem" href="./documents">  WG-Spectrum </a><a class="item mobileitem" href="./6gcg">  6GCG </a>
+        <div class="header">  <span id="xuserinfo">USER </span> </div>      
+        <div class="item" data-user-auth="">      <i class="icon user"></i>Profile      </div>
+        <div class="item" data-user-auth="">     <i class="icon wrench"></i>Settings       </div>
+        <div class="item" data-user-auth=""> <i class="icon folder"></i>Documents</div>
+        <div class="item" id="logout"> <i class="icon  sign in alternate"></i> Sign In</div> 
+    </div>
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<link type="text/css" rel="stylesheet" href="./_file/css/style.80bdcb6d.css">
+
+
+<div class="ui green right ribbon label hidden" id="userinfo"> </div>
+<div id="loginformparent" class="ui inverted tiny modal" hidden=""></div>
+  <script> 
+    // function toggleBigMenu(){
+    // var box=document.querySelector("#bigmenubox");
+    // box.classList.toggle("visible");
+    // }
+
+    $(".ui.dropdown").dropdown()
+  </script>
+
+    <script type="module">
+    // const {showLogin,getCurrentUser,logOut} = await import( fbauthpath )
+
+    import {showLogin,getCurrentUser,logOut} from "/components/fbauth.js"
+    document.getElementById("logout").addEventListener("click", function (e) {  
+
+      getCurrentUser().then(u=>{
+        if(u==null){
+        $("#loginformparent").modal('show');        
+          showLogin("#loginformparent","#userinfo");
+        }else{
+        document.querySelector("#userinfo").classList.add("hidden");
+          logOut();
+        }
+        
+      })
+});
+</script>
+    
+    
+</header>
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:1c86fddb:--></div>
+<div>
+<observablehq-loading></observablehq-loading><!--:5a4b1237:-->
+</div>
+<div class="observablehq observablehq--block"><!--:d6fdd099:--></div>
+<style>
+  #currentfiles{
+    display:inline-flex;
+    flex-direction:column;
+    /* max-height:250px; */
+    
+    padding-bottom:10px;
+    /* margin:12px; */
+    /* justify-content:space-equally; */
+    /* border:1px solid var(--theme-foreground-faintest); */
+    /* width:100%; */
+     /* overflow-y:scroll;  */
+  }
+  #currentfiles  form {
+    /* display:inline-flex; */
+    /* flex-direction:column; */
+    max-height:250px;
+    /* margin-bottom:3em; */
+    /* padding:15px; */
+    /* justify-content:space-equally; */
+    border:1px solid var(--theme-foreground-faintest);
+    /* width:100%; */
+    /* overflow-y:scroll; */
+  }
+
+#currentfiles a{
+  /* display:"inline-block"; */
+   /* padding: .1em; */
+   /* margin: .3em; */
+   /* align-self: start; */
+   font-size:1.1em;
+   color: var(--theme-forground);
+} 
+  
+  #currentfiles a:hover {
+    /* font-size:1.2em; */
+    transform:scale(1.01);
+    color:var(--theme-foreground-focus);
+    font-size:1.2em;
+    text-decoration:none;
+    transition: 400ms
+  }
+  
+  #drop-area{
+border: 2px dashed #ccc; 
+border-radius: 20px; 
+font-family: sans-serif; 
+margin: 10px auto; 
+padding: 20px;
+transition: all 400ms;    
+}
+
+
+#drop-area.highlight {
+  border: 2px dashed var(--theme-foreground-focus); 
+  /* border-color: var(--theme-foreground-focus); */
+    background-color: var(--theme-foreground-focus); 
+    transition: all 400ms;    
+  }
+
+
+
+    
+</style>
+<!-- <h1>Document Manager</h1> -->
+<h2 id="about" tabindex="-1"><a class="observablehq-header-anchor" href="#about">About</a></h2>
+<p>This page is for managing files needed for using in the <a href="https://6gcg.5gindiaforum.in" class="external" target="_blank" rel="noopener noreferrer">6GCG Portal</a></p>
+<hr>
+<h3 id="repository" tabindex="-1"><a class="observablehq-header-anchor" href="#repository">Repository</a></h3>
+<div class="grid grid-cols-3"> 
+<div class="grid-colspan-2">
+<!-- name is ${hash} -->
+<div id="currentfiles">
+<div class="observablehq observablehq--block"><!--:decc6434:--></div>
+<div style="display:flex">
+<button class="ui  button" id="btnFetchFiles">Delete Files </button>
+<button class="ui  button" id="btnrefresh" onclick="increment">Refresh </button>
+</div>
+<div class="observablehq observablehq--block"><!--:0f58c096:--></div>
+</div>
+</div>
+<div class="grid-colspan-1">
+<h2 id="drag-here" tabindex="-1"><a class="observablehq-header-anchor" href="#drag-here">Drag here</a></h2>
+<input class="ui input " type="file" id="inpFileInput" multiple="" accept="*">  
+<!-- <button class="ui button" id="fileSelect">Select some files</button><hr> -->
+<div id="drop-area">  
+  <p>Drag and drop files here</p>  
+  <span id="filelist"></span>
+</div>
+<button class="ui  primary button" id="upload"> Upload all</button>
+<button class="ui button" id="clearfiles"> Clear All</button>
+</div>
+</div>
+<div class="ui success inverted hidden message "> <i class="close icon"></i><p> </p></div>
+<div class="caution">Do not delete files that you have not uploaded..</div>
+<!-- ALL SCRIPTS go below -->
+<div class="observablehq observablehq--block"><!--:f4f1da62:--></div>
+<div class="observablehq observablehq--block"><!--:72b5b0d4:--></div>
+<div class="observablehq observablehq--block"><!--:221ad6b3:--></div>
+<div class="observablehq observablehq--block"><!--:ebdd826d:--></div>
+<div class="observablehq observablehq--block"><!--:ff1863d2:--></div>
+</main>
+<footer id="observablehq-footer">
+<div><hr><div style="text-align:center">
+    © 2024 - 5G India Forum  | 
+    Photo by <a href="https://unsplash.com/@lightliu?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="_blank" rel="noopener noreferrer">Light Liu</a> on <a href="https://unsplash.com/photos/bokeh-photography-N8P35ITqRZA?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="_blank" rel="noopener noreferrer">Unsplash</a>      
+    
+    </div>
+    
+    <br><br>
+    
+
+    </div>
+</footer>
+</div>
